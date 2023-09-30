@@ -1,0 +1,207 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Added for positioning */
+}
+
+#full-screen-image {
+    width: 69%;
+}   
+#image-container {
+    height: 100%; /* Set to 100% to cover the entire viewport height */
+    position: relative; /* Added for positioning */
+}.trafficLight1 {
+    background-color: black;
+    width: 4%;
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 21%; /* Position at the bottom of the container */
+    left: 13%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(90deg);
+}
+.trafficLight1 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+   
+}
+.trafficLight2 {
+    background-color: black;
+    width: 4%;
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 21%; /* Position at the bottom of the container */
+    left: 23%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(90deg);
+}
+.trafficLight2 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+    
+}
+.trafficLight3 {
+    background-color: black;
+    width: 4%;
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 77%; /* Position at the bottom of the container */
+    left: 33%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(90deg);
+}
+.trafficLight3 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+    
+}
+.trafficLight4 {
+    background-color: black;
+    width: 4%;
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 77%; /* Position at the bottom of the container */
+    left: 43%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(90deg);
+}
+.trafficLight4 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+   
+}
+.trafficLight5 {
+    background-color: black;
+    width: 4%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 21%; /* Position at the bottom of the container */
+    left: 47%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(0deg);
+}
+.trafficLight5 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+   
+}
+.trafficLight6 {
+    background-color: black;
+    width: 4%;
+    height: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 39%; /* Position at the bottom of the container */
+    left: 47%; /* Center horizontally */
+   /* Center horizontally */
+   transform: translateX(-50%) rotate(0deg);
+}
+.trafficLight6 span {
+    width: 52%;
+    height: 27%;
+    border-radius: 100%;
+    background-color: gray;
+    
+}
+#car1 {
+  display: none;
+    position: absolute;
+    bottom: 1%; /* Adjust the vertical position */
+    left: 9%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(-90deg);
+}
+#car2 {
+  display: none;
+    position: absolute;
+    bottom: 1%; /* Adjust the vertical position */
+    left: 19%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(-90deg);
+}
+#car3 {
+  display: none;
+    position: absolute;
+    top: 1%; /* Adjust the vertical position */
+    left: 29%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(90deg);
+}
+#car4 {
+  display: none;
+    position: absolute;
+    top: 1%; /* Adjust the vertical position */
+    left: 39%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(90deg);
+}
+#car5 {
+  display: none;
+    position: absolute;
+    bottom: 25%; /* Adjust the vertical position */
+    right: 30%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(180deg);
+}
+#car6 {
+  display: none;
+    position: absolute;
+    bottom: 40%; /* Adjust the vertical position */
+    right: 30%; /* Initial position off the screen */
+    /* Animation duration and timing function */
+    transform:  rotate(180deg);
+}
+form {
+position: absolute;
+font-size: 100%;
+left: 80%; /* Adjust the distance from the right edge */
+top: 10%; /* Center vertically */
+
+}
