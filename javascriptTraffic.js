@@ -1,16 +1,108 @@
 const carForm = document.getElementById("car-form");
-carForm.addEventListener("submit", function(event) {
+
+carForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting
 
-    // Loop through the checkboxes and cars
+    // Collect the selected lanes from the checkboxes
+    const selectedLanes = [];
     for (let i = 1; i <= 6; i++) {
         const showCarCheckbox = document.getElementById(`lane${i}`);
-        const car = document.getElementById(`car${i}`);
-        
-        // Check the state of each checkbox and show/hide the corresponding car
-        car.style.display = showCarCheckbox.checked ? "block" : "none";
+        if (showCarCheckbox.checked) {
+            selectedLanes.push(i.toString());
+        }
     }
+
+    // Check if any lanes are selected
+    if (selectedLanes.length === 0) {
+        alert("Please select at least one lane.");
+        return;
+    }
+
+    // Join the selected lanes into a string
+    const inputString = selectedLanes.join("");
+    updateTrafficLightsForInputNumbers(selectedLanes);
+    // Use the isAccepted function to check if the input is valid
+    const result = isAccepted(inputString);
+    if (selectedLanes.length === 0) {
+      alert("Please select at least one lane.");
+      return;
+  }
+    // Display the result
+    console.log(result);
+    if (result === "True: สามารถใช้งานพร้อมกันได้") {
+      // Display the cars for selected lanes
+      for (let i = 1; i <= 6; i++) {
+          const car = document.getElementById(`car${i}`);
+          // Check if the lane is selected, and display the corresponding car
+          if (selectedLanes.includes(i.toString())) {
+              console.log(i);
+              car.style.display = "block";
+          } else {
+              car.style.display = "none"; // Hide unselected cars
+          }
+      }
+  } else {
+      // Hide all cars if it's false
+      for (let i = 1; i <= 6; i++) {
+          const car = document.getElementById(`car${i}`);
+          car.style.display = "none";
+      }
+  }
+  
 });
+
+function isAccepted(inputString) {
+  
+
+
+  const dfa = {
+    "Qs": { "1": "G1", "2": "G2", "3": "G3", "4": "G4", "5": "G5", "6": "G6" },
+    "G1": { "2": "G1_2", "3": "G1_3", "4": "G1_4", "5": "G1_5", "1": "E", "6": "E" },
+    "G1_2": { "5": "G1_2_5", "1": "E", "2": "E", "3": "E", "4": "E", "6": "E" },
+    "G1_3": { "4": "G1_3_4", "1": "E", "2": "E", "3": "E", "5": "E", "6": "E" },
+    "G1_4": { "5": "G1_4_5", "1": "E", "2": "E", "3": "E", "4": "E", "6": "E" },
+    "G1_5": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G1_2_5": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G1_3_4": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G1_4_5": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G2": { "5": "G2_5", "1": "E", "2": "E", "3": "E", "4": "E", "6": "E" },
+    "G2_5": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G3": { "4": "G3_4", "1": "E", "2": "E", "3": "E", "5": "E", "6": "E" },
+    "G3_4": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G4": { "5": "G4_5", "6": "G4_6", "1": "E", "2": "E", "3": "E", "4": "E" },
+    "G4_5": { "6": "G4_5_6", "1": "E", "2": "E", "3": "E", "4": "E", "5": "E" },
+    "G4_6": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G4_5_6": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G5": { "6": "G5_6", "1": "E", "2": "E", "3": "E", "4": "E", "5": "E" },
+    "G5_6": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "G6": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" },
+    "E": { "1": "E", "2": "E", "3": "E", "4": "E", "5": "E", "6": "E" }
+};
+
+  let current_state = "Qs";
+
+  for (let i = 0; i < inputString.length; i++) {
+      const symbol = inputString[i];
+      const next_state = dfa[current_state][symbol];
+
+      if (next_state === undefined || next_state === "E") {
+          return `False: มีเลนที่ไม่สามารถใช้งานร่วมกันได้: ${symbol}`;
+      }
+
+      current_state = next_state;
+  }
+
+  if (current_state === "Qs" || current_state === "E") {
+      return "False: ไม่มีการเลือกเลนหรือเลนที่เลือกไม่สอดคล้องกับกฎ";
+  }
+
+  return "True: สามารถใช้งานพร้อมกันได้";
+}
+
+
+// Add more test cases as needed
+
+
 
       // Define traffic light states and durations
 const trafficLightStates = ["red", "yellow", "green"];
@@ -53,7 +145,25 @@ const trafficLights = [
 // Initialize traffic light states and timers with different starting indices
 const trafficLightStatesIndexes = [2, 2, 1, 0, 1, 2];// Example: Starts at red for the first light, yellow for the second, and green for the third
 const trafficLightTimers = new Array(trafficLights.length);
+function updateTrafficLightsForInputNumbers(inputNumbers) {
+  resetTrafficLights(); // Reset all lights to red
+  for (const number of inputNumbers) {
+    // Check if the input number is valid (between 1 and 6)
+    if (number >= 1 && number <= 6) {
+      // Set the green light for the selected lane
+      trafficLights[number - 1]["green"].style.backgroundColor = "green";
+    }
+  }
+}
 
+// Function to reset all traffic lights to red
+function resetTrafficLights() {
+  for (const trafficLight of trafficLights) {
+    for (const key of Object.keys(trafficLight)) {
+      trafficLight[key].style.backgroundColor = "Grey";
+    }
+  }
+}
 // Function to update traffic light state
 function updateTrafficLight(index) {
   const stateIndex = trafficLightStatesIndexes[index];
