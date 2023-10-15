@@ -213,7 +213,7 @@ top: 10%; /* Center vertically */
 #dfapic{
 
     position: absolute;
-    width: 600px;
+    width: 520px;
     height: auto;
     bottom: 0px;
     right: 0px;
@@ -227,7 +227,7 @@ top: 10%; /* Center vertically */
     padding: 1rem 1rem;
     top:10px;
     right:10px;
-    
+    height: 39%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
