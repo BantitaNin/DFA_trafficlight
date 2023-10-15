@@ -211,6 +211,7 @@ top: 10%; /* Center vertically */
 
 
 #dfapic{
+
     position: absolute;
     width: 600px;
     height: auto;
@@ -349,3 +350,4 @@ top: 10%; /* Center vertically */
 .button-68:hover {
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
+
