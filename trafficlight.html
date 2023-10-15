@@ -9,16 +9,15 @@
 </head>
 <body>
     <div id="image-container">
+    <div id = "traffic-container">
         <img id="full-screen-image" src="https://i.ibb.co/WkYSK7T/dfaroad.png" alt="dfaroad">
-        
-      
         <div id="car1" >
             <img class="car1" src="http://www.clker.com/cliparts/l/H/d/6/d/G/blue-car-top-view-hi.png"width="180" height="100">
         </div>
         <div id="car2">
             <img class="car1" src="http://www.clker.com/cliparts/l/H/d/6/d/G/blue-car-top-view-hi.png"width="180" height="100">
         </div>
-   -    <div id="car3">
+       <div id="car3">
             <img class="car1" src="http://www.clker.com/cliparts/l/H/d/6/d/G/blue-car-top-view-hi.png"width="180" height="100">
         </div>
         <div id="car4" >
@@ -61,26 +60,57 @@
             <span id="yellowLight6" class="yellow"></span>
             <span id="greenLight6" class="green"></span>
         </div>
+    </div>
         <form id="car-form">
-          <h1>Chose your lanes</h1>
-          <input type="checkbox" id="lane1" name="lanes" value="lane1">
-          <label for="lane1">Lane 1</label><br>
-        
-          <input type="checkbox" id="lane2" name="lanes" value="lane2">
-          <label for="lane2">Lane 2</label><br>
-        
-          <input type="checkbox" id="lane3" name="lanes" value="lane3">
-          <label for="lane3">Lane 3</label><br>
-        
-          <input type="checkbox" id="lane4" name="lanes" value="lane4">
-          <label for="lane4">Lane 4</label><br>
-        
-          <input type="checkbox" id="lane5" name="lanes" value="lane5">
-          <label for="lane5">Lane 5</label><br>
-        
-          <input type="checkbox" id="lane6" name="lanes" value="lane6">
-          <label for="lane6">Lane 6</label><br>
-          <input type="submit" value="Submit">
+          <div>
+          <h1>Choose your lanes</h1>
+          <hr>
+          </div>
+
+          <div class = "toggle-holder">
+          <div class = "toggle-row">
+          <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="lane1" name="lanes" value="lane1">
+            <div class="toggle-switch"></div>
+            <label for="lane1">Lane 1</label>
+          </label>
+
+          <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="lane2" name="lanes" value="lane2">
+            <div class="toggle-switch"></div>
+            <label for="lane2">Lane 2</label>
+          </label>
+
+          <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="lane3" name="lanes" value="lane3">
+            <div class="toggle-switch"></div>
+            <label for="lane3">Lane 3</label>
+          </label>
+          </div>
+
+          <div class="toggle-row">
+          <label class="toggle">
+          <input class="toggle-checkbox" type="checkbox" id="lane4" name="lanes" value="lane4">
+          <div class="toggle-switch"></div>
+          <label for="lane4">Lane 4</label>
+          </label>
+
+          <label class="toggle">
+          <input class="toggle-checkbox" type="checkbox" id="lane5" name="lanes" value="lane5">
+          <div class="toggle-switch"></div>
+          <label for="lane5">Lane 5</label>
+          </label>
+
+          <label class="toggle">
+          <input class="toggle-checkbox" type="checkbox" id="lane6" name="lanes" value="lane6">
+          <div class="toggle-switch"></div>
+          <label for="lane6">Lane 6</label>
+          </label>
+          </div>
+
+          </div>
+
+          <input class="button-68" type="submit" value="Submit">
         </form>
        
         <img id="dfapic" src="https://cdn.pic.in.th/file/picinth/2023-10-12_22-07-52e67bde0d7abd3543.jpeg" alt="2023-10-12_22-07-52e67bde0d7abd3543.jpeg" />
