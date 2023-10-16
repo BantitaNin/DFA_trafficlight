@@ -1093,17 +1093,19 @@ function isAccepted(inputString) {
   let current_state = "Qs";
 
   for (let i = 0; i < inputString.length; i++) {
-      const symbol = inputString[i];
-      const next_state = dfa[current_state][symbol];
+    const symbol = inputString[i];
+    const next_state = dfa[current_state][symbol];
 
-      if (next_state === undefined || next_state === "E") {
-          return `False: มีเลนที่ไม่สามารถใช้งานร่วมกันได้: ${symbol}`;
-      }
+    if (next_state === undefined || next_state === "E") {
+        alert(`มีเลนที่ไม่สามารถใช้งานร่วมกันได้`);
+        return `False: มีเลนที่ไม่สามารถใช้งานร่วมกันได้: ${symbol}`;
+    }
 
       current_state = next_state;
   }
 
   if (current_state === "Qs" || current_state === "E") {
+      alert("ไม่สอดคล้องกับกฎ");
       return "False: ไม่มีการเลือกเลนหรือเลนที่เลือกไม่สอดคล้องกับกฎ";
   }
 
