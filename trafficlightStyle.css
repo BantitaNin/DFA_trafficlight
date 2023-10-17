@@ -151,7 +151,7 @@ body {
     
 }
 #car1 {
-  display: none;
+    display: none;
     position: absolute;
     bottom: 1%; /* Adjust the vertical position */
     left: 9%; /* Initial position off the screen */
@@ -159,7 +159,7 @@ body {
     transform:  rotate(-90deg);
 }
 #car2 {
-  display: none;
+    display: none;
     position: absolute;
     bottom: 1%; /* Adjust the vertical position */
     left: 19%; /* Initial position off the screen */
@@ -167,7 +167,7 @@ body {
     transform:  rotate(-90deg);
 }
 #car3 {
-  display: none;
+    display: none;
     position: absolute;
     top: 1%; /* Adjust the vertical position */
     left: 29%; /* Initial position off the screen */
@@ -175,7 +175,7 @@ body {
     transform:  rotate(90deg);
 }
 #car4 {
-  display: none;
+    display: none;
     position: absolute;
     top: 1%; /* Adjust the vertical position */
     left: 39%; /* Initial position off the screen */
@@ -183,7 +183,7 @@ body {
     transform:  rotate(90deg);
 }
 #car5 {
-  display: none;
+    display: none;
     position: absolute;
     bottom: 25%; /* Adjust the vertical position */
     right: 30%; /* Initial position off the screen */
@@ -191,7 +191,7 @@ body {
     transform:  rotate(180deg);
 }
 #car6 {
-  display: none;
+    display: none;
     position: absolute;
     bottom: 40%; /* Adjust the vertical position */
     right: 30%; /* Initial position off the screen */
@@ -199,17 +199,27 @@ body {
     transform:  rotate(180deg);
 }
 form {
-position: absolute;
-font-size: 100%;
-left: 80%; /* Adjust the distance from the right edge */
-top: 10%; /* Center vertically */
+    position: absolute;
+    font-size: 100%;
+    left: 80%; /* Adjust the distance from the right edge */
+    top: 10%; /* Center vertically */
 
 }
-#dfapic{
 
+#dfapic {
     position: absolute;
-        width: 400px;
-        height: 350px;
-        top: 350px;
-        left: 1050px;
-    }
+    width: 400px;
+    height: 350px;
+    top: 350px;
+    left: 1050px;
+}
+
+#car-form {
+    max-width: 370px;
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}

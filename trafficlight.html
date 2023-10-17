@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Light</title>
     <link rel="stylesheet" href="trafficlightStyle.css">
-   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div id="image-container">
@@ -61,28 +62,36 @@
             <span id="yellowLight6" class="yellow"></span>
             <span id="greenLight6" class="green"></span>
         </div>
-        <form id="car-form">
-          <h1>Chose your lanes</h1>
-          <input type="checkbox" id="lane1" name="lanes" value="lane1">
-          <label for="lane1">Lane 1</label><br>
-        
-          <input type="checkbox" id="lane2" name="lanes" value="lane2">
-          <label for="lane2">Lane 2</label><br>
-        
-          <input type="checkbox" id="lane3" name="lanes" value="lane3">
-          <label for="lane3">Lane 3</label><br>
-        
-          <input type="checkbox" id="lane4" name="lanes" value="lane4">
-          <label for="lane4">Lane 4</label><br>
-        
-          <input type="checkbox" id="lane5" name="lanes" value="lane5">
-          <label for="lane5">Lane 5</label><br>
-        
-          <input type="checkbox" id="lane6" name="lanes" value="lane6">
-          <label for="lane6">Lane 6</label><br>
-          <input type="submit" value="Submit">
+        <form id="car-form" class="container mt-5">
+            <h2 class="mb-4">Choose your lanes</h2>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane1" name="lanes" value="lane1">
+                    <label class="form-check-label" for="lane1">Lane 1</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane2" name="lanes" value="lane2">
+                    <label class="form-check-label" for="lane2">Lane 2</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane3" name="lanes" value="lane3">
+                    <label class="form-check-label" for="lane3">Lane 3</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane4" name="lanes" value="lane4">
+                    <label class="form-check-label" for="lane4">Lane 4</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane5" name="lanes" value="lane5">
+                    <label class="form-check-label" for="lane5">Lane 5</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lane6" name="lanes" value="lane6">
+                    <label class="form-check-label" for="lane6">Lane 6</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-       
         <img id="dfapic" src="https://cdn.pic.in.th/file/picinth/2023-10-12_22-07-52e67bde0d7abd3543.jpeg" alt="2023-10-12_22-07-52e67bde0d7abd3543.jpeg" border="0" />
     </div>
     <script src="javascriptTraffic.js"></script>
