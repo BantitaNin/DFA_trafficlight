@@ -12,13 +12,22 @@ body {
 #full-screen-image {
     width: 69%;
 }   
+
 #image-container {
     height: 100%; /* Set to 100% to cover the entire viewport height */
     position: relative; /* Added for positioning */
-}.trafficLight1 {
+}
+
+#traffic-container {
+  width: 75%; /* Set the width of the traffic container */
+  position: relative; /* Added for positioning */
+  padding-top: 120px;
+}
+
+.trafficLight1 {
     background-color: black;
     width: 4%;
-    height: 16%;
+    height: 14%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,8 +35,8 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 21%; /* Position at the bottom of the container */
-    left: 13%; /* Center horizontally */
+    bottom: 18.5%;
+    left: 12.7%;
    /* Center horizontally */
    transform: translateX(-50%) rotate(90deg);
 }
@@ -41,7 +50,7 @@ body {
 .trafficLight2 {
     background-color: black;
     width: 4%;
-    height: 16%;
+    height: 14%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,8 +58,8 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 21%; /* Position at the bottom of the container */
-    left: 23%; /* Center horizontally */
+    bottom: 18.5%;
+    left: 22.5%;
    /* Center horizontally */
    transform: translateX(-50%) rotate(90deg);
 }
@@ -64,7 +73,7 @@ body {
 .trafficLight3 {
     background-color: black;
     width: 4%;
-    height: 16%;
+    height: 14%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,8 +81,8 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 77%; /* Position at the bottom of the container */
-    left: 33%; /* Center horizontally */
+    bottom: 56.5%;
+    left: 33%;
    /* Center horizontally */
    transform: translateX(-50%) rotate(90deg);
 }
@@ -87,7 +96,7 @@ body {
 .trafficLight4 {
     background-color: black;
     width: 4%;
-    height: 16%;
+    height: 14%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,8 +104,8 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 77%; /* Position at the bottom of the container */
-    left: 43%; /* Center horizontally */
+    bottom: 56.5%;
+    left: 43%;
    /* Center horizontally */
    transform: translateX(-50%) rotate(90deg);
 }
@@ -110,7 +119,7 @@ body {
 .trafficLight5 {
     background-color: black;
     width: 4%;
-    height: 15%;
+    height: 12%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,8 +127,8 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 21%; /* Position at the bottom of the container */
-    left: 47%; /* Center horizontally */
+    bottom: 17.5%;
+    left: 45%;
    /* Center horizontally */
    transform: translateX(-50%) rotate(0deg);
 }
@@ -133,7 +142,7 @@ body {
 .trafficLight6 {
     background-color: black;
     width: 4%;
-    height: 14%;
+    height: 12%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -141,10 +150,10 @@ body {
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    bottom: 39%; /* Position at the bottom of the container */
-    left: 47%; /* Center horizontally */
+    bottom: 32.5%;
+    left: 45%;
    /* Center horizontally */
-   transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
 }
 .trafficLight6 span {
     width: 52%;
@@ -153,71 +162,82 @@ body {
     background-color: gray;
     
 }
-#car1 {
-    display: none;
-    position: absolute;
-    bottom: 1%; /* Adjust the vertical position */
-    left: 9%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(-90deg);
-}
-#car2 {
-    display: none;
-    position: absolute;
-    bottom: 1%; /* Adjust the vertical position */
-    left: 19%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(-90deg);
-}
-#car3 {
-    display: none;
-    position: absolute;
-    top: 1%; /* Adjust the vertical position */
-    left: 29%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(90deg);
-}
-#car4 {
-    display: none;
-    position: absolute;
-    top: 1%; /* Adjust the vertical position */
-    left: 39%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(90deg);
-}
-#car5 {
-    display: none;
-    position: absolute;
-    bottom: 25%; /* Adjust the vertical position */
-    right: 30%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(180deg);
-}
-#car6 {
-    display: none;
-    position: absolute;
-    bottom: 40%; /* Adjust the vertical position */
-    right: 30%; /* Initial position off the screen */
-    /* Animation duration and timing function */
-    transform:  rotate(180deg);
-}
-form {
-    position: absolute;
-    font-size: 100%;
-    left: 80%; /* Adjust the distance from the right edge */
-    top: 10%; /* Center vertically */
 
+#car1 {
+  display: none;
+  position: absolute;
+  bottom: 0%; /* Adjust the vertical position */
+  left: 9.5%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(-90deg);
+}
+
+#car2 {
+  display: none;
+  position: absolute;
+  bottom: 0%; /* Adjust the vertical position */
+  left: 19.5%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(-90deg);
+}
+
+#car3 {
+  display: none;
+  position: absolute;
+  top: 20%; /* Adjust the vertical position */
+  left: 29.5%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(90deg);
+}
+
+#car4 {
+  display: none;
+  position: absolute;
+  top: 20.5%; /* Adjust the vertical position */
+  left: 39.5%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(90deg);
+}
+
+#car5 {
+  display: none;
+  position: absolute;
+  bottom: 22%; /* Adjust the vertical position */
+  right: 30%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(180deg);
+}
+
+#car6 {
+  display: none;
+  position: absolute;
+  bottom: 37%; /* Adjust the vertical position */
+  right: 30%; /* Initial position off the screen */
+  /* Animation duration and timing function */
+  transform: rotate(180deg);
+}
+
+form {
+  position: absolute;
+  font-size: 100%;
+  width: 300px;
+  left: 67%; /* Adjust the distance from the right edge */
+  top: 10%; /* Center vertically */
 }
 
 
 #dfapic{
-
-#dfapic {
     position: absolute;
     width: 520px;
     height: auto;
     bottom: 0px;
-    right: 0px;
+    top: 450px;
+    right: 180px;
+}
+
+#name {
+  position: absolute;
+  left: 30%;
 }
 
 #car-form{
@@ -228,12 +248,11 @@ form {
     padding: 1rem 1rem;
     top:10px;
     right:10px;
-    height: 39%;
+    height: 45%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 1.125rem;
-
     font-size: 14px;
 }
 
@@ -352,3 +371,45 @@ form {
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 
+#link-sourcecode{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 8px;
+  margin: 3px;
+  border-radius: 8px;
+  /* border: solid grey 3px; */
+  text-decoration: none;
+  background:rgb(165, 165, 165);
+ 
+}
+
+#link-sourcecode:hover{
+  background:rgb(107, 107, 107);
+  /* box-shadow: 0 0 0 1px rgba(0,0,0,0); */
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#link-sourcecode img{
+  width: 32px;
+  height: auto;
+  /* filter: invert(100%); */
+}
+
+#link-sourcecode span{
+  font-weight: 600;
+  color: white;
+}
+
+#img-github{
+  height: auto;
+  width: 48px;
+}
+
+.car1 {
+  width: 90px; /* Set the width of the cars */
+  height: auto; /* Maintain aspect ratio */
+}
