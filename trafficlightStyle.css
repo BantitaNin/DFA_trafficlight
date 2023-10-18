@@ -351,3 +351,42 @@ top: 10%; /* Center vertically */
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 
+#link-sourcecode{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 8px;
+  margin: 3px;
+  border-radius: 8px;
+  /* border: solid grey 3px; */
+  text-decoration: none;
+  background:rgb(165, 165, 165);
+ 
+}
+
+#link-sourcecode:hover{
+  background:rgb(107, 107, 107);
+  /* box-shadow: 0 0 0 1px rgba(0,0,0,0); */
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#link-sourcecode img{
+  width: 32px;
+  height: auto;
+  /* filter: invert(100%); */
+}
+
+#link-sourcecode span{
+  font-weight: 600;
+  color: white;
+}
+
+
+
+#img-github{
+  height: auto;
+  width: 48px;
+}
