@@ -1251,10 +1251,10 @@ function moveCar1() {
   function animateCar() {
     // Check if trafficlight1 is green before moving the car
     if (isTrafficLight1Green() || currentPosition >= 150 || currentPosition <= 100) {
-      currentPosition += 20; // Move the car up
+      currentPosition += 5; // Move the car up
       car1.style.marginBottom = currentPosition + "px";
 
-      if (currentPosition >= 3000) {
+      if (currentPosition >= 700) {
         currentPosition = 10; // Stop the animation when the car reaches the top
         car1.style.marginBottom = currentPosition + "px";
       }
@@ -1276,17 +1276,17 @@ function moveCar2() {
   function animateCar() {
     // Check if trafficlight1 is green before moving the car
     if (isTrafficLight2Green() || currentPosition >= 150 || currentPosition <= 100) {
-      currentPosition += 20; // Move the car up (responsive to screen size)
+      currentPosition += 5; // Move the car up (responsive to screen size)
       car2.style.marginBottom = currentPosition + "px";
 
       if (currentPosition >= 0.75 * screenHeight) {
         currentPosition = 10; // Stop the animation when the car reaches the top
-      } else if (currentPosition >= 0.54 * screenHeight) {
+      } else if (currentPosition >= 0.48 * screenHeight) {
         // Adjust the rotation angle
         car2.style.transform = `rotate(${0}deg)`;
-        currentPosition = 0.54 * screenHeight;
+        currentPosition = 0.48 * screenHeight;
         let currentLeft = parseFloat(car2.style.marginLeft || "0");
-        currentLeft +=20; // Move the car to the right (responsive to screen size)
+        currentLeft +=5; // Move the car to the right (responsive to screen size)
         car2.style.marginLeft = currentLeft + "px";
         if (currentLeft >= 0.725 * screenHeight) {
           currentPosition = 10;
@@ -1309,7 +1309,7 @@ function moveCar3() {
   function animateCar() {
     // Check if trafficlight1 is green before moving the car
     if (isTrafficLight3Green() || currentPosition >= 80 || currentPosition <= 3) {
-      currentPosition += 20; // Move the car up
+      currentPosition += 5; // Move the car up
       car3.style.marginTop = currentPosition + "px";
 
       if (currentPosition >= 2500) {
@@ -1335,14 +1335,14 @@ function moveCar4() {
       currentPosition += 5; // Move the car up
       car4.style.marginTop = currentPosition + "px";
 
-      if (currentPosition >= 150) {
-        currentPosition = 150; // Stop the animation when the car reaches the top
+      if (currentPosition >= 100) {
+        currentPosition = 100; // Stop the animation when the car reaches the top
         
         car4.style.transform= `rotate(${0}deg)`;
         let currentLeft = parseFloat(car4.style.marginLeft || "0");
         currentLeft +=5;
         car4.style.marginLeft = currentLeft + "px";
-        if(currentLeft >= 800){
+        if(currentLeft >= 400){
             currentLeft = 0;
             currentPosition = 0;
             car4.style.marginTop = currentPosition + "px";
@@ -1370,8 +1370,8 @@ function moveCar5() {
       currentPosition += 5; // Move the car up
       car5.style.marginRight = currentPosition + "px";
 
-      if (currentPosition >= 300) {
-        currentPosition = 300; // Stop the animation when the car reaches the top
+      if (currentPosition >= 330) {
+        currentPosition = 330; // Stop the animation when the car reaches the top
         car5.style.transform =`rotate(${90}deg)`;
       
         currenttop-=5;
@@ -1402,16 +1402,16 @@ function moveCar6() {
   function animateCar() {
     // Check if trafficlight1 is green before moving the car
     if (isTrafficLight6Green() || currentPosition>=300 || currentPosition <=200 ) {
-      currentPosition += 20; // Move the car up
+      currentPosition += 5; // Move the car up
       car6.style.marginRight = currentPosition + "px";
 
-      if (currentPosition >= 800) {
-        currentPosition = 800; // Stop the animation when the car reaches the top
+      if (currentPosition >= 730) {
+        currentPosition = 730; // Stop the animation when the car reaches the top
         car6.style.transform =`rotate(${-90}deg)`;
       
-        currenttop+=20;
+        currenttop+=5;
         car6.style.marginBottom = currenttop + "px";
-        if (currenttop >= 3000){
+        if (currenttop >= 400){
           car6.style.transform =`rotate(${180}deg)`;
 
           currentPosition = 10;
